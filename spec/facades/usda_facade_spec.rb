@@ -13,6 +13,7 @@ RSpec.describe UsdaFacade do
         expect(response.first.description).to eq("SWEETS MEDLEY SEL GRIS, BATATA, SWEET POTATO, PURPLE SWEET POTATO REAL VEGETABLE CHIPS, SWEETS MEDLEY")
         expect(response.first.brand_owner).to eq("The Hain Celestial Group, Inc.")
         expect(response.first.ingredients).to eq("A BLEND OF SWEET POTATOES (SWEET POTATO, PURPLE SWEET POTATO, BATATA), AVOCADO OIL, SEA SALT.")
+        expect(response.size).to eq(10)
       end
     end
 
