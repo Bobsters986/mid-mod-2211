@@ -4,8 +4,8 @@ RSpec.describe UsdaService do
   describe 'instance methods' do
     describe '#food_search' do
       it 'returns food data for the searched food' do
-        service = UsdaService.new
-        response = service.food_search('sweet potatoes')
+        service = UsdaService.new('sweet potatoes')
+        response = service.food_search
 
         expect(response).to be_a(Hash)
         expect(response).to have_key(:totalHits)

@@ -1,11 +1,11 @@
-<h1>Foods from Search</h1>
+<h1>Foods from "<%= params[:q] %>" Search</h1>
 
-<% if @foods.empty? %>
+<% if @food_facade.food_search.empty? %>
   <h3>No foods found</h3>
 <% else %>
-  <h3><%= @total_hits %> Results found, Displaying <%= @foods.size %></h3>
+  <h3><%= @food_facade.total_hits %> Results found, Displaying <%= @food_facade.food_search.size %></h3>
   <ul>
-    <% @foods.each do |food| %>
+    <% @food_facade.food_search.each do |food| %>
       <strong>Description: <%= food.description %></strong><br>
       <li>Brand Owner: <%= food.brand_owner %></li>
       <li>GTIN/UPC code: <%= food.gtin_upc %></li>

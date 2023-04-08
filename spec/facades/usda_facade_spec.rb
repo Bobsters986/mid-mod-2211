@@ -4,8 +4,8 @@ RSpec.describe UsdaFacade do
   describe 'instance methods' do
     describe '#food_search' do
       it 'returns food data for the searched food' do
-        facade = UsdaFacade.new
-        response = facade.food_search('sweet potatoes')
+        facade = UsdaFacade.new('sweet potatoes')
+        response = facade.food_search
 
         expect(response).to be_an(Array)
         expect(response.first).to be_a(Food)
@@ -19,8 +19,8 @@ RSpec.describe UsdaFacade do
 
     describe '#total_hits' do
       it 'returns the total number of hits for the searched food' do
-        facade = UsdaFacade.new
-        response = facade.total_hits('sweet potatoes')
+        facade = UsdaFacade.new('sweet potatoes')
+        response = facade.total_hits
 
         expect(response).to be_an(Integer)
         expect(response).to eq(38114)
